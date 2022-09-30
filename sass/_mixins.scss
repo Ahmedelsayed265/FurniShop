@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500&family=Tajawal:wght@400;500&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 36px;
+  scroll-behavior: smooth;
+  font-family: 'Saira', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+$home_background: #f4feff;
+$black_color: #000;
+$white: #fff;
+$light_gray: #c4c4c4;
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: $white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $black_color;
+  height: 300px;
+}
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin centerAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin clearInput {
+  border: none;
+  background: none;
+  outline: none;
+}
