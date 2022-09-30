@@ -87,6 +87,30 @@ body header nav {
   padding: 28px 100px;
   font-weight: 500;
 }
+body header nav.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 9999999999;
+  transition: 0.5 all ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+body header nav.active .logo {
+  color: #286f6c;
+}
+body header nav.active ul li a {
+  color: #23262f;
+}
+body header nav.active ul li a::after {
+  background-color: #23262f;
+}
+body header nav.active .nav_btns button {
+  color: #23262f;
+}
+body header nav.active .nav_btns button a {
+  color: #23262f;
+}
 body header nav .logo {
   font-size: 32px;
   color: #fff;
@@ -96,7 +120,22 @@ body header nav ul {
   gap: 50px;
 }
 body header nav ul li a {
+  position: relative;
   color: #fff;
+}
+body header nav ul li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  height: 1px;
+  background-color: #fff;
+  width: 0;
+}
+body header nav ul li a.active::after, body header nav ul li a:hover::after {
+  width: 100%;
+  transition: 0.2s;
 }
 body header nav .nav_btns button {
   border: none;
@@ -229,13 +268,5 @@ body .container .about .grid .about-text .serv:first-of-type {
   margin-bottom: 25px;
 }
 body .container .about .grid .about-text .serv .icon {
-  margin-right: 20px;
-  min-width: 20px;
-  height: 20px;
-  font-size: 12px;
-  border-radius: 50%;
-  background-color: #23262f;
-  color: #fff;
-  display: grid;
-  place-items: center;
+  margin-right: 15px;
 }/*# sourceMappingURL=main.css.map */
