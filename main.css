@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  line-height: 36px;
+  line-height: 1.5;
   scroll-behavior: smooth;
   font-family: "Saira", sans-serif;
   -webkit-tap-highlight-color: transparent;
@@ -18,6 +18,44 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.container {
+  padding: 0 100px;
+}
+
+section {
+  padding: 50px 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+.main-p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.sub-p {
+  font-size: 16px;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -27,14 +65,177 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #23262f;
   height: 300px;
 }
 
 body header {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-image: url("images/home.jpg");
   background-size: 100%;
-  background-position: 50% 50%;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+}
+body header nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 100px;
+  font-weight: 500;
+}
+body header nav .logo {
+  font-size: 32px;
+  color: #fff;
+}
+body header nav ul {
+  display: flex;
+  gap: 50px;
+}
+body header nav ul li a {
+  color: #fff;
+}
+body header nav .nav_btns button {
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+}
+body header nav .nav_btns button a {
+  color: #fff;
+}
+body header main {
+  position: relative;
+  height: calc(120vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+body header main .custom_dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(226, 226, 226, 0.4);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body header main .custom_dot.dot1 {
+  position: absolute;
+  left: 195px;
+  top: 200px;
+}
+body header main .custom_dot.dot2 {
+  position: absolute;
+  left: 275px;
+  bottom: 230px;
+}
+body header main .custom_dot.dot3 {
+  position: absolute;
+  right: 140px;
+  bottom: 140px;
+}
+body header main .custom_dot span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+body header main h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  line-height: 62.8px;
+  font-weight: 500;
+  margin-top: 140px;
+}
+body header main p {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 1%;
+  color: #fff;
+  margin-top: 50px;
+}
+body header main button {
+  width: 257px;
+  height: 62px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  outline: none;
+  background: rgba(226, 226, 226, 0.4);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  font-size: 20px;
+  color: #fff;
+  margin-top: 55px;
+  cursor: pointer;
+}
+body header main .counter_container {
+  width: calc(100% - 200px);
+  height: 130px;
+  background-color: #286f6c;
+  position: absolute;
+  left: 100px;
+  bottom: -65px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+body header main .counter_container .count {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body header main .counter_container .count:nth-child(4) {
+  border-right: 0;
+}
+body header main .counter_container .count h3 {
+  font-size: 28px;
+  line-height: 30px;
+  color: #fff;
+}
+body header main .counter_container .count p {
+  margin-top: 0;
+  font-size: 15px;
+  line-height: 22px;
+}
+body .container .about .grid {
+  padding: 50px 0;
+}
+body .container .about .grid .about-text .serv {
+  display: flex;
+}
+body .container .about .grid .about-text .serv:first-of-type {
+  margin-bottom: 25px;
+}
+body .container .about .grid .about-text .serv .icon {
+  margin-right: 20px;
+  min-width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: #23262f;
+  color: #fff;
+  display: grid;
+  place-items: center;
 }/*# sourceMappingURL=main.css.map */
