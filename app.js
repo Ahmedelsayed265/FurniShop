@@ -46,3 +46,23 @@ window.addEventListener("scroll", () => {
     started = true;
   }
 });
+//------------------Map section----------------------------//
+if (navigator.geolocation) {
+  const pos = [30.560668, 31.018417];
+  navigator.geolocation.getCurrentPosition(
+    function(position) {
+      const { latitude, longitude } = position.coords;
+      const coords = [latitude, longitude];
+      const map = L.map("mapLocation").setView(coords, 11);
+      L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      L.marker(coords).addTo(map).bindPopup("This is your Location");
+      L.marker(pos).addTo(map).bindPopup("This is our Location").openPopup();
+    },
+    function() {
+      alert("cannot get current position");
+    }
+  );
+}

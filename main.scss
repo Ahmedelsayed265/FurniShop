@@ -147,7 +147,7 @@ body {
         background-color: $green_color;
         position: absolute;
         left: 100px;
-        bottom: -65px;
+        bottom: -145px;
         border-radius: 20px;
         @include centerFlex();
         padding: 20px 0;
@@ -176,6 +176,11 @@ body {
   }
   .container {
     .about {
+      h2,
+      h3,
+      p {
+        color: $black_color;
+      }
       .grid {
         padding: 50px 0;
         .about-text {
@@ -189,6 +194,148 @@ body {
             }
           }
         }
+      }
+    }
+    .contact {
+      width: 100%;
+      padding: 50px 0;
+      .hed {
+        color: $black_color;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .row {
+        display: flex;
+        width: 100%;
+        gap: 5%;
+        .form_container {
+          width: 50%;
+          form {
+            width: 100%;
+            .info_grid {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 20px;
+              .inp_field {
+                padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+                label {
+                  color: $black_color;
+                  font-size: 15px;
+                  font-weight: 500;
+                }
+                input {
+                  @include clearInput();
+                  border: 1px solid $footer_color;
+                  border-radius: 4px;
+                  padding: 0 10px;
+                  height: 40px;
+                  color: $black_color;
+                  &::placeholder {
+                    color: $footer_color;
+                  }
+                }
+              }
+            }
+            .text_area {
+              padding: 30px 10px 0 10px;
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              label {
+                color: $black_color;
+                font-size: 15px;
+                font-weight: 500;
+              }
+              textarea {
+                @include clearInput();
+                border: 1px solid $footer_color;
+                border-radius: 4px;
+                padding: 10px 10px;
+                color: $black_color;
+                &::placeholder {
+                  color: $footer_color;
+                }
+              }
+            }
+            button {
+              margin-top: 30px;
+              margin-left: 10px;
+              cursor: pointer;
+              width: 180px;
+              font-size: 16px;
+              height: 40px;
+              border-radius: 20px;
+              @include clearInput();
+              background: $white;
+              box-shadow: $main_shadow;
+              color: $black_color;
+            }
+          }
+        }
+        .map_container {
+          width: 45%;
+        }
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    background-color: $black_color;
+    padding: 0 100px;
+    .row {
+      border-bottom: 1px solid $footer_color;
+      @include space-between();
+      padding: 40px 0;
+      .logo {
+        color: $footer_color;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .social {
+        display: flex;
+        gap: 15px;
+        a {
+          min-width: 30px;
+          min-height: 30px;
+          border-radius: 50%;
+          background-color: #2a2b40;
+          @include centerFlex();
+          color: $footer_color;
+          font-size: 12px;
+        }
+      }
+    }
+    .container_grid {
+      padding: 50px 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 100px;
+      .col {
+        h5 {
+          color: $footer_color;
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 30px;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          a {
+            color: $footer_color;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .copy {
+      height: 50px;
+      width: 100%;
+      p {
+        color: $footer_color;
+        text-align: center;
       }
     }
   }

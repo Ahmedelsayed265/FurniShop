@@ -94,7 +94,7 @@ body header nav.active {
   background: #fff;
   z-index: 9999999999;
   transition: 0.5 all ease-in-out;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.05);
 }
 body header nav.active .logo {
   color: #286f6c;
@@ -229,7 +229,7 @@ body header main .counter_container {
   background-color: #286f6c;
   position: absolute;
   left: 100px;
-  bottom: -65px;
+  bottom: -145px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -258,6 +258,11 @@ body header main .counter_container .count p {
   font-size: 15px;
   line-height: 22px;
 }
+body .container .about h2,
+body .container .about h3,
+body .container .about p {
+  color: #23262f;
+}
 body .container .about .grid {
   padding: 50px 0;
 }
@@ -269,4 +274,166 @@ body .container .about .grid .about-text .serv:first-of-type {
 }
 body .container .about .grid .about-text .serv .icon {
   margin-right: 15px;
+}
+body .container .contact {
+  width: 100%;
+  padding: 50px 0;
+}
+body .container .contact .hed {
+  color: #23262f;
+  margin-bottom: 50px;
+  text-align: center;
+}
+body .container .contact .row {
+  display: flex;
+  width: 100%;
+  gap: 5%;
+}
+body .container .contact .row .form_container {
+  width: 50%;
+}
+body .container .contact .row .form_container form {
+  width: 100%;
+}
+body .container .contact .row .form_container form .info_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+body .container .contact .row .form_container form .info_grid .inp_field {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+body .container .contact .row .form_container form .info_grid .inp_field label {
+  color: #23262f;
+  font-size: 15px;
+  font-weight: 500;
+}
+body .container .contact .row .form_container form .info_grid .inp_field input {
+  border: none;
+  background: none;
+  outline: none;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 40px;
+  color: #23262f;
+}
+body .container .contact .row .form_container form .info_grid .inp_field input::-moz-placeholder {
+  color: #c4c4c4;
+}
+body .container .contact .row .form_container form .info_grid .inp_field input:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+body .container .contact .row .form_container form .info_grid .inp_field input::placeholder {
+  color: #c4c4c4;
+}
+body .container .contact .row .form_container form .text_area {
+  padding: 30px 10px 0 10px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+body .container .contact .row .form_container form .text_area label {
+  color: #23262f;
+  font-size: 15px;
+  font-weight: 500;
+}
+body .container .contact .row .form_container form .text_area textarea {
+  border: none;
+  background: none;
+  outline: none;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  padding: 10px 10px;
+  color: #23262f;
+}
+body .container .contact .row .form_container form .text_area textarea::-moz-placeholder {
+  color: #c4c4c4;
+}
+body .container .contact .row .form_container form .text_area textarea:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+body .container .contact .row .form_container form .text_area textarea::placeholder {
+  color: #c4c4c4;
+}
+body .container .contact .row .form_container form button {
+  margin-top: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  width: 180px;
+  font-size: 16px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background: none;
+  outline: none;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.05);
+  color: #23262f;
+}
+body .container .contact .row .map_container {
+  width: 45%;
+}
+body footer {
+  width: 100%;
+  background-color: #23262f;
+  padding: 0 100px;
+}
+body footer .row {
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+body footer .row .logo {
+  color: #c4c4c4;
+  font-size: 24px;
+  font-weight: 500;
+}
+body footer .row .social {
+  display: flex;
+  gap: 15px;
+}
+body footer .row .social a {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  background-color: #2a2b40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4c4c4;
+  font-size: 12px;
+}
+body footer .container_grid {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 100px;
+}
+body footer .container_grid .col h5 {
+  color: #c4c4c4;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+body footer .container_grid .col .links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body footer .container_grid .col .links a {
+  color: #c4c4c4;
+  font-size: 14px;
+}
+body footer .copy {
+  height: 50px;
+  width: 100%;
+}
+body footer .copy p {
+  color: #c4c4c4;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

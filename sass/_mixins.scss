@@ -48,7 +48,8 @@ img {
 $black_color: #23262f;
 $green_color: #286f6c;
 $white: #fff;
-$main_shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$main_shadow: 0px 4px 10px rgba(15, 27, 51, 0.05);
+$footer_color: #c4c4c4;
 ::-webkit-scrollbar {
   width: 4px;
 }
