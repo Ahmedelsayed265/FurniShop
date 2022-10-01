@@ -68,7 +68,12 @@ body {
         }
       }
       .nav_btns {
+        display: flex;
+        gap: 20px;
         button {
+          &:nth-child(2) {
+            display: none;
+          }
           @include clearInput();
           color: $white;
           font-size: 18px;
@@ -508,6 +513,233 @@ body {
       p {
         color: $footer_color;
         text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: 820px) {
+  body {
+    header {
+      height: 50vh;
+      nav {
+        padding: 28px 35px;
+        .logo {
+          font-size: 28px;
+        }
+      }
+      main {
+        height: calc(50vh - 80px);
+        h1 {
+          font-size: 35px;
+          line-height: 50px;
+          margin-top: 35px;
+        }
+        p {
+          font-size: 18px;
+          margin-top: 30px;
+        }
+        button {
+          width: 150px;
+          height: 50px;
+          border-radius: 6px;
+          font-size: 18px;
+          margin-top: 28px;
+        }
+        .counter_container {
+          bottom: -65px;
+          width: calc(100% - 100px);
+          left: 50px;
+        }
+        .custom_dot {
+          display: none;
+        }
+      }
+    }
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 50px;
+    }
+    .container {
+      padding: 0 50px;
+      .features {
+        .products {
+          grid-template-columns: repeat(2, 1fr);
+          margin-bottom: 60px;
+        }
+        .grid {
+          padding: 50px 0;
+          grid-gap: 0;
+          grid-template-columns: repeat(1, 1fr);
+          .about-text {
+            height: 320px;
+            .controlers {
+              margin: 0;
+              height: 40px;
+              top: 310px;
+            }
+          }
+        }
+      }
+      .contact .row {
+        flex-direction: column;
+        .form_container,
+        .map_container {
+          width: 100%;
+        }
+        .map_container {
+          height: 350px;
+        }
+      }
+    }
+    .sub {
+      height: 260px;
+      padding: 0 20px;
+      h3 {
+        font-weight: 500;
+        font-size: 30px;
+      }
+      form {
+        input {
+          width: 270px;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+    footer {
+      padding: 0 50px;
+      .container_grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 70px;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  body {
+    h2 {
+      font-size: 34px;
+    }
+    header {
+      height: 100vh;
+      background-size: cover;
+      nav {
+        padding: 28px 30px;
+        .logo {
+          font-size: 24px;
+        }
+        ul {
+          display: none;
+        }
+        .nav_btns {
+          button {
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+      }
+      main {
+        height: calc(100vh - 80px);
+        h1 {
+          font-size: 28px;
+          line-height: 44px;
+          margin-top: 184px;
+        }
+        p {
+          font-size: 13px;
+          line-height: 26px;
+        }
+        .counter_container {
+          width: calc(100% - 30px);
+          left: 15px;
+          bottom: -100px;
+          .count h3 {
+            font-size: 22px;
+          }
+          .count p {
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    .container {
+      padding: 0 30px;
+      .features .grid .about-text .profile .info .pos {
+        font-size: 14px;
+      }
+      .features {
+        .h2-feat,
+        .feat-p {
+          width: 100%;
+        }
+        .products {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .grid {
+          .about-text {
+            height: 390px;
+            h2 {
+              font-size: 30px;
+            }
+            .controlers {
+              top: 374px;
+            }
+          }
+        }
+      }
+      .contact {
+        .hed {
+          font-size: 34px;
+        }
+        .row {
+          .form_container .info_grid {
+            grid-template-columns: repeat(1, 1fr) !important;
+          }
+          .map_container {
+            height: 320px;
+          }
+        }
+      }
+    }
+    .sub {
+      background-size: 100% 100%;
+      h3 {
+        font-size: 28px;
+      }
+      form {
+        input {
+          height: 50px;
+          width: 240px;
+          font-size: 14px;
+        }
+        button {
+          height: 50px;
+          width: 100px;
+          font-size: 14px;
+        }
+      }
+    }
+    footer {
+      padding: 0 30px;
+      .row {
+        .logo {
+          font-size: 22px;
+        }
+        .social {
+          gap: 10px;
+          a {
+            width: 25px;
+            height: 25px;
+            font-size: 10px;
+          }
+        }
+      }
+      .container_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
       }
     }
   }
