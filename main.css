@@ -266,6 +266,9 @@ body .container .about p {
 body .container .about .grid {
   padding: 50px 0;
 }
+body .container .about .grid .sec_p {
+  margin-top: 40px;
+}
 body .container .about .grid .about-text .serv {
   display: flex;
 }
@@ -275,9 +278,137 @@ body .container .about .grid .about-text .serv:first-of-type {
 body .container .about .grid .about-text .serv .icon {
   margin-right: 15px;
 }
+body .container .features {
+  padding-top: 0;
+}
+body .container .features .h2-feat,
+body .container .features .feat-p {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+body .container .features .products {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+body .container .features .products .product .img {
+  border: 1px solid rgba(16, 38, 55, 0.1);
+  border-radius: 10px;
+  position: relative;
+  mix-blend-mode: multiply;
+}
+body .container .features .products .product .img::before {
+  content: url(images/plus.png);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+body .container .features .products .product .name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+body .container .features .products .product .price {
+  display: block;
+  font-size: 16px;
+}
+body .container .features .products .product .price .offer {
+  opacity: 0.5;
+  margin: 10px 0 0 10px;
+  text-decoration: line-through;
+}
+body .container .features .controlers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0 50px;
+  gap: 50px;
+}
+body .container .features .controlers .prev,
+body .container .features .controlers .next {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body .container .features .controlers .prev i,
+body .container .features .controlers .next i {
+  font-size: 14px;
+}
+body .container .features .controlers .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+body .container .features .controlers .indicats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+body .container .features .controlers .indicats .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #23262f;
+  cursor: pointer;
+}
+body .container .features .controlers .indicats .active {
+  background-color: #23262f;
+}
+body .container .features .grid {
+  padding: 50px 0;
+}
+body .container .features .grid .controlers {
+  margin: 50px 0 50px;
+}
+body .container .features .grid .about-text h2 {
+  font-size: 32px;
+}
+body .container .features .grid .about-text .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+body .container .features .grid .about-text .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+body .container .features .grid .about-text .profile .info {
+  margin-left: 20px;
+}
+body .container .features .grid .about-text .profile .info .user {
+  font-size: 20px;
+  font-weight: bold;
+}
+body .container .features .grid .about-text .profile .info .pos {
+  font-size: 16px;
+  opacity: 0.5;
+}
+body .container .features .grid .about-text .controlers {
+  justify-content: flex-start;
+}
+body .container .features .grid .about-text .controlers .next {
+  background-color: #286f6c;
+  color: #fff;
+}
+body .container .features .grid .about-text .controlers .prev {
+  opacity: 1;
+}
 body .container .contact {
   width: 100%;
-  padding: 50px 0;
+  padding-top: 0;
+  padding-bottom: 50px;
 }
 body .container .contact .hed {
   color: #23262f;

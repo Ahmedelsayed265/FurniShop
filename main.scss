@@ -183,6 +183,9 @@ body {
       }
       .grid {
         padding: 50px 0;
+        .sec_p{
+          margin-top: 40px;
+        }
         .about-text {
           .serv {
             display: flex;
@@ -196,9 +199,132 @@ body {
         }
       }
     }
+    .features {
+      padding-top: 0;
+      .h2-feat,
+      .feat-p {
+        text-align: center;
+        width: 500px;
+        margin: auto;
+      }
+      .products {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        .product {
+          .img {
+            border: 1px solid rgba(16, 38, 55, 0.1);
+            border-radius: 10px;
+            position: relative;
+            mix-blend-mode: multiply;
+            &::before {
+              content: url(images/plus.png);
+              position: absolute;
+              bottom: 15px;
+              right: 15px;
+              cursor: pointer;
+            }
+          }
+          .name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+          }
+          .price {
+            display: block;
+            font-size: 16px;
+            .offer {
+              opacity: 0.5;
+              margin: 10px 0 0 10px;
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+      .controlers {
+        @include centerFlex();
+        margin: 60px 0 50px;
+        gap: 50px;
+        .prev,
+        .next {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          @include centerFlex();
+          cursor: pointer;
+          i{
+            font-size: 14px;
+          }
+        }
+        .disabled {
+          opacity: 0.5;
+          pointer-events: none
+        }
+        .indicats {
+          @include space-between();
+          gap: 20px;
+          .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid $black_color;
+            cursor: pointer;
+          }
+          .active {
+            background-color: $black_color;
+          }
+        }
+      }
+      .grid {
+        .controlers{
+          margin: 50px 0 50px;
+        }
+        padding: 50px 0;
+        .about-text {
+          h2 {
+            font-size: 32px;
+          }
+          .profile {
+            @include centerFlex();
+            justify-content: flex-start;
+            margin-bottom: 30px;
+            img {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+            }
+            .info {
+              margin-left: 20px;
+              .user {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              .pos {
+                font-size: 16px;
+                opacity: 0.5;
+              }
+            }
+          }
+          .controlers {
+            justify-content: flex-start;
+            .next {
+              background-color: #286f6c;
+              color: $white;
+            }
+            .prev {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
     .contact {
       width: 100%;
-      padding: 50px 0;
+      padding-top: 0;
+      padding-bottom: 50px ;
       .hed {
         color: $black_color;
         margin-bottom: 50px;
