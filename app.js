@@ -66,3 +66,47 @@ if (navigator.geolocation) {
     }
   );
 }
+//---------------------- testimonial slider ------------------------//
+const track = document.querySelector(".carousel-track");
+const slides = Array.from(track.children);
+const nextButton = document.querySelector(".left-btn");
+const prevButton = document.querySelector(".right-btn");
+const slideWidth = slides[0].getBoundingClientRect().width;
+//arrange the slides next to one another
+const setSlidePostion = (slide, index) => {
+  slide.style.left = slideWidth * index + "px";
+};
+slides.forEach(setSlidePostion);
+// next btn //
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+  currentSlide.classList.remove("current-slide");
+  targetSlide.classList.add("current-slide");
+};
+nextButton.addEventListener("click", e => {
+  const currentSlide = track.querySelector(".current-slide");
+  const nextSlide = currentSlide.nextElementSibling;
+  const nextIndex = slides.findIndex(slide => slide === nextSlide);
+  moveToSlide(track, currentSlide, nextSlide);
+  disableButtons(slides, prevButton, nextButton, nextIndex);
+});
+// prev btn //
+prevButton.addEventListener("click", e => {
+  const currentSlide = track.querySelector(".current-slide");
+  const prevSlide = currentSlide.previousElementSibling;
+  const prevIndex = slides.findIndex(slide => slide === prevSlide);
+  moveToSlide(track, currentSlide, prevSlide);
+  disableButtons(slides, prevButton, nextButton, prevIndex);
+});
+const disableButtons = (slides, prevButton, nextButton, targetIndex) => {
+  if (targetIndex == 0) {
+    prevButton.classList.add("disable");
+    nextButton.classList.remove("disable");
+  } else if (targetIndex == slides.length - 1) {
+    prevButton.classList.remove("disable");
+    nextButton.classList.add("disable");
+  } else {
+    prevButton.classList.remove("disable");
+    nextButton.classList.remove("disable");
+  }
+};

@@ -328,8 +328,8 @@ body .container .features .controlers {
   margin: 60px 0 50px;
   gap: 50px;
 }
-body .container .features .controlers .prev,
-body .container .features .controlers .next {
+body .container .features .controlers .left-btn,
+body .container .features .controlers .right-btn {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -339,15 +339,13 @@ body .container .features .controlers .next {
   justify-content: center;
   cursor: pointer;
 }
-body .container .features .controlers .prev i,
-body .container .features .controlers .next i {
+body .container .features .controlers .left-btn i,
+body .container .features .controlers .right-btn i {
   font-size: 14px;
 }
-body .container .features .controlers .disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
 body .container .features .grid {
+  overflow: hidden;
+  position: relative;
   padding: 150px 0 50px 0;
 }
 body .container .features .grid .controlers {
@@ -355,6 +353,17 @@ body .container .features .grid .controlers {
 }
 body .container .features .grid .about-text h2 {
   font-size: 32px;
+}
+body .container .features .grid .about-text .carousel-track {
+  position: relative;
+}
+body .container .features .grid .about-text .carousel-track .carousel-slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+body .container .features .grid .about-text .carousel-track .carousel-slide.current-slide {
+  opacity: 1;
 }
 body .container .features .grid .about-text .profile {
   display: flex;
@@ -381,13 +390,22 @@ body .container .features .grid .about-text .profile .info .pos {
 }
 body .container .features .grid .about-text .controlers {
   justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-body .container .features .grid .about-text .controlers .next {
+body .container .features .grid .about-text .controlers .left-btn,
+body .container .features .grid .about-text .controlers .right-btn {
   background-color: #286f6c;
   color: #fff;
-}
-body .container .features .grid .about-text .controlers .prev {
   opacity: 1;
+}
+body .container .features .grid .about-text .controlers .left-btn.disable,
+body .container .features .grid .about-text .controlers .right-btn.disable {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #fff;
+  color: #23262f;
 }
 body .container .contact {
   width: 100%;

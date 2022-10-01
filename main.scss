@@ -247,8 +247,8 @@ body {
         @include centerFlex();
         margin: 60px 0 50px;
         gap: 50px;
-        .prev,
-        .next {
+        .left-btn,
+        .right-btn {
           width: 35px;
           height: 35px;
           border-radius: 50%;
@@ -259,12 +259,10 @@ body {
             font-size: 14px;
           }
         }
-        .disabled {
-          opacity: 0.5;
-          pointer-events: none;
-        }
       }
       .grid {
+        overflow: hidden;
+        position: relative;
         .controlers {
           margin: 50px 0 50px;
         }
@@ -272,6 +270,17 @@ body {
         .about-text {
           h2 {
             font-size: 32px;
+          }
+          .carousel-track {
+            position: relative;
+            .carousel-slide {
+              position: absolute;
+              width: 100%;
+              opacity: 0;
+              &.current-slide {
+                opacity: 1;
+              }
+            }
           }
           .profile {
             @include centerFlex();
@@ -296,12 +305,20 @@ body {
           }
           .controlers {
             justify-content: flex-start;
-            .next {
-              background-color: #286f6c;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            .left-btn,
+            .right-btn {
+              background-color: $green_color;
               color: $white;
-            }
-            .prev {
               opacity: 1;
+              &.disable {
+                opacity: 0.5;
+                pointer-events: none;
+                background-color: $white;
+                color: $black_color;
+              }
             }
           }
         }
