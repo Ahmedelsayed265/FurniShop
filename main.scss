@@ -252,7 +252,7 @@ body {
           width: 35px;
           height: 35px;
           border-radius: 50%;
-          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: $main_shadow;
           @include centerFlex();
           cursor: pointer;
           i {
