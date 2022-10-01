@@ -727,6 +727,46 @@ body .container .contact .row .map_container {
   body header nav {
     padding: 28px 30px;
   }
+  body header nav.res_active {
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 99999999;
+    align-items: baseline;
+  }
+  body header nav.res_active .logo,
+body header nav.res_active .nav_btns {
+    height: 80px;
+    color: #286f6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body header nav.res_active .nav_btns {
+    position: absolute;
+    top: 0;
+    right: 30px;
+  }
+  body header nav.res_active .nav_btns button a {
+    color: #23262f;
+  }
+  body header nav.res_active ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    display: flex;
+  }
+  body header nav.res_active ul li a {
+    color: #23262f;
+  }
+  body header nav.res_active ul li a::after {
+    color: #23262f;
+  }
   body header nav .logo {
     font-size: 24px;
   }

@@ -110,3 +110,25 @@ const disableButtons = (slides, prevButton, nextButton, targetIndex) => {
     nextButton.classList.remove("disable");
   }
 };
+//-----------------responsiveNav----------------------------//
+let toggler = document.querySelector(".toggle");
+let togglerIcon = document.querySelector(".toggle i");
+let menuLinks = document.querySelectorAll(".nav_link");
+
+toggler.addEventListener("click", () => {
+  nav.classList.toggle("res_active");
+  if (togglerIcon.classList.contains("fa-bars")) {
+    togglerIcon.classList.remove("fa-bars");
+    togglerIcon.classList.add("fa-times");
+  } else {
+    togglerIcon.classList.add("fa-bars");
+    togglerIcon.classList.remove("fa-times");
+  }
+});
+for (let i = 0; i < menuLinks.length; i++) {
+  menuLinks[i].addEventListener("click", () => {
+    nav.classList.remove("res_active");
+    togglerIcon.classList.remove("fa-times");
+    togglerIcon.classList.add("fa-bars");
+  });
+}

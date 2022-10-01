@@ -625,6 +625,41 @@ body {
       height: 100vh;
       background-size: cover;
       nav {
+        &.res_active {
+          padding: 0 30px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          background-color: $white;
+          z-index: 99999999;
+          align-items: baseline;
+          .logo,
+          .nav_btns {
+            height: 80px;
+            color: $green_color;
+            @include centerFlex();
+          }
+          .nav_btns {
+            position: absolute;
+            top: 0;
+            right: 30px;
+            button a {
+              color: $black_color;
+            }
+          }
+          ul {
+            @include centerAbsolute();
+            flex-direction: column;
+            display: flex;
+            li a {
+              color: $black_color;
+              &::after {
+                color: $black_color;
+              }
+            }
+          }
+        }
         padding: 28px 30px;
         .logo {
           font-size: 24px;
