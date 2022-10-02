@@ -529,6 +529,9 @@ body {
       }
       main {
         height: calc(50vh - 80px);
+        &.longer {
+          height: 50vh;
+        }
         h1 {
           font-size: 35px;
           line-height: 50px;
@@ -619,7 +622,7 @@ body {
 @media (max-width: 450px) {
   body {
     h2 {
-      font-size: 34px;
+      font-size: 32px;
     }
     header {
       height: 100vh;
@@ -644,7 +647,7 @@ body {
             position: absolute;
             top: 0;
             right: 30px;
-            button a {
+            button a ,i{
               color: $black_color;
             }
           }
@@ -655,7 +658,7 @@ body {
             li a {
               color: $black_color;
               &::after {
-                color: $black_color;
+                background-color: $black_color;
               }
             }
           }
@@ -677,6 +680,9 @@ body {
       }
       main {
         height: calc(100vh - 80px);
+        &.longer {
+          height: 100vh;
+        }
         h1 {
           font-size: 28px;
           line-height: 44px;
@@ -689,7 +695,7 @@ body {
         .counter_container {
           width: calc(100% - 30px);
           left: 15px;
-          bottom: -100px;
+          bottom: -60px;
           .count h3 {
             font-size: 22px;
           }

@@ -1,11 +1,14 @@
 //------------------fixed navbar----------------------------//
 let fixPoint = document.querySelector("header main").offsetTop;
 let nav = document.querySelector("header nav");
+let main = document.querySelector("header main");
 window.onscroll = function() {
   if (this.scrollY >= fixPoint - 40) {
     nav.classList.add("active");
+    main.classList.add("longer");
   } else {
     nav.classList.remove("active");
+    main.classList.remove("longer");
   }
 };
 //------------------Nav Links hover----------------------------//

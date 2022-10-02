@@ -636,6 +636,9 @@ body footer .copy p {
   body header main {
     height: calc(50vh - 80px);
   }
+  body header main.longer {
+    height: 50vh;
+  }
   body header main h1 {
     font-size: 35px;
     line-height: 50px;
@@ -718,7 +721,7 @@ body .container .contact .row .map_container {
 }
 @media (max-width: 450px) {
   body h2 {
-    font-size: 34px;
+    font-size: 32px;
   }
   body header {
     height: 100vh;
@@ -750,7 +753,7 @@ body header nav.res_active .nav_btns {
     top: 0;
     right: 30px;
   }
-  body header nav.res_active .nav_btns button a {
+  body header nav.res_active .nav_btns button a, body header nav.res_active .nav_btns i {
     color: #23262f;
   }
   body header nav.res_active ul {
@@ -765,7 +768,7 @@ body header nav.res_active .nav_btns {
     color: #23262f;
   }
   body header nav.res_active ul li a::after {
-    color: #23262f;
+    background-color: #23262f;
   }
   body header nav .logo {
     font-size: 24px;
@@ -779,6 +782,9 @@ body header nav.res_active .nav_btns {
   body header main {
     height: calc(100vh - 80px);
   }
+  body header main.longer {
+    height: 100vh;
+  }
   body header main h1 {
     font-size: 28px;
     line-height: 44px;
@@ -791,7 +797,7 @@ body header nav.res_active .nav_btns {
   body header main .counter_container {
     width: calc(100% - 30px);
     left: 15px;
-    bottom: -100px;
+    bottom: -60px;
   }
   body header main .counter_container .count h3 {
     font-size: 22px;
