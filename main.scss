@@ -278,13 +278,6 @@ body {
             border-radius: 10px;
             position: relative;
             mix-blend-mode: multiply;
-            &::before {
-              content: url(images/plus.png);
-              position: absolute;
-              bottom: 15px;
-              right: 15px;
-              cursor: pointer;
-            }
           }
           .name {
             font-size: 20px;

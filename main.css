@@ -354,13 +354,6 @@ body .container .features .products .product .img {
   position: relative;
   mix-blend-mode: multiply;
 }
-body .container .features .products .product .img::before {
-  content: url(images/plus.png);
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  cursor: pointer;
-}
 body .container .features .products .product .name {
   font-size: 20px;
   font-weight: bold;
