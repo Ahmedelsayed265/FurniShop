@@ -731,6 +731,7 @@ body footer .copy p {
   }
   body .container .contact .row {
     flex-direction: column;
+    gap: 40px;
   }
   body .container .contact .row .form_container,
 body .container .contact .row .map_container {
